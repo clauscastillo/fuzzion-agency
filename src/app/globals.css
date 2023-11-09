@@ -13,10 +13,6 @@
 }
 
 
-@font-face {
-  font-family: 'Briar';
-  src: url('/briar.otf') format('opentype')
-}
 
 body {
   overflow-x: hidden;
@@ -25,7 +21,6 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  font-family: 'Poppins', sans-serif;
 }
 
 

@@ -1,13 +1,9 @@
-import { motion } from "framer-motion";
+import Image from "next/image";
 import { AiFillCloseCircle } from "react-icons/ai";
 
 const Budget = ({ popup, close }) => {
   return (
-    <motion.section
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.5 }}
-      transition={{ duration: 1 }}
+    <section
       className={
         popup
           ? "lg:px-1/10 px-5p fixed grid gap-10 grid-cols-2 bg-black/95 py-20 overflow-y-auto text-white w-full h-full top-0 left-0 m-0 z-30"
@@ -79,11 +75,11 @@ const Budget = ({ popup, close }) => {
         </form>
       </div>
       <div className="hidden lg:flex flex-col items-center gap-3 self-center w-4/5">
-        <img src="/contact.png" alt="" />
+        <Image src="/contact.png" alt="" width={500} height={800} />
         <a href="mailto:info@fuzzionagency.com">info@fuzzionagency.com</a>
         <a href="http://wa.me/595972217068">+595-972-217-068</a>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

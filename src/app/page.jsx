@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import MainAnimation from "../components/MainAnimation";
 import TextAnimate from "../components/TextAnimate";
 import Consulting from "../components/Consulting";
+import Image from "next/image";
 
 const Index = () => {
   useEffect(() => {
@@ -99,7 +100,13 @@ const Index = () => {
 
         <div className="grid lg:grid-cols-3 lg:gap-5 my-10 ">
           <article className="p-10 rounded-xl lg:shadow-2xl shadow-card hover:bg-slate-50 transition-colors duration-300 lg:w-full mx-auto my-5 w-3/4">
-            <img src="dev.png" alt="" className="w-1/3 h-auto" />
+            <Image
+              src="/dev.png"
+              alt=""
+              className="w-1/3 h-auto"
+              width={250}
+              height={250}
+            />
             <h3 className="font-medium lg:text-2xl">Desarrollo</h3>
             <p className="text-slate-700">
               Ofrecemos soluciones de desarrollo versátiles, desde sitios web
@@ -107,7 +114,13 @@ const Index = () => {
             </p>
           </article>
           <article className="p-10 rounded-xl lg:shadow-2xl shadow-card hover:bg-slate-50 transition-colors duration-300 lg:w-full mx-auto my-5 w-3/4">
-            <img src="design.png" alt="" className="w-1/3 h-auto" />
+            <Image
+              src="/design.png"
+              alt=""
+              className="w-1/3 h-auto"
+              width={250}
+              height={250}
+            />
             <h3 className="font-medium lg:text-2xl">Diseño</h3>
             <p className="text-slate-700">
               Transformamos tu imagen en línea y fuera de línea mediante un
@@ -116,7 +129,13 @@ const Index = () => {
             </p>
           </article>
           <article className="p-10 rounded-xl lg:shadow-2xl shadow-card hover:bg-slate-50 transition-colors duration-300 lg:w-full mx-auto my-5 w-3/4">
-            <img src="mkt.png" alt="" className="w-1/3 h-auto" />
+            <Image
+              src="/mkt.png"
+              alt=""
+              className="w-1/3 h-auto"
+              width={250}
+              height={250}
+            />
             <h3 className="font-medium lg:text-2xl">Marketing Digital</h3>
             <p>
               Elevamos tu presencia en línea y atraemos clientes de manera
@@ -144,7 +163,13 @@ const Index = () => {
             nivel en el mundo digital. Únete a este emocionante viaje.
           </p>
         </div>
-        <img src="business.png" alt="" className="lg:order-none order-2" />
+        <Image
+          src="/business.png"
+          alt=""
+          className="lg:order-none order-2"
+          width={500}
+          height={500}
+        />
       </section>
       <Consulting />
       {/* <section className="testimonial">

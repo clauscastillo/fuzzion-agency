@@ -1,9 +1,24 @@
-import { Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"] });
+const poppins = localFont({
+  src: [
+    {
+      path: "./fonts/Poppins-Regular.ttf",
+      weight: "400",
+    },
+    {
+      path: "./fonts/Poppins-Medium.ttf",
+      weight: "500",
+    },
+    {
+      path: "./fonts/Poppins-SemiBold.ttf",
+      weight: "600",
+    },
+  ],
+});
 
 export const metadata = {
   title: "Fuzzion",
