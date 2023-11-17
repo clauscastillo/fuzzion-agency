@@ -8,7 +8,7 @@ const Footer = ({ scrollToTop }) => {
   return (
     <footer className="bg-dark lg:relative lg:px-1/10 px-5p py-10  ">
       {/* <div className="absolute"></div> */}
-      <div className="lg:grid lg:grid-cols-footer gap-16 text-white flex flex-col items-center ">
+      <div className="lg:grid lg:grid-cols-footer lg:items-start gap-16 text-white flex flex-col items-center ">
         <hr className="lg:hidden order-3" />
         <div className="lg:w-56 lg:order-none w-full flex flex-col items-center gap-5 order-3">
           <Image
@@ -35,7 +35,7 @@ const Footer = ({ scrollToTop }) => {
           </p>
         </div>
 
-        <div className="lg:flex lg:justify-evenly lg:gap-10 lg:order-none lg:flex-row flex flex-col text-center gap-10 order-1">
+        <div className="lg:flex lg:justify-evenly lg:order-none lg:flex-row lg:text-left flex flex-col text-center gap-10 order-1">
           <div className="flex flex-col gap-5 ">
             <h4 className="font-bold mb-2">Empresa</h4>
             <Link href={"/"} onClick={scrollToTop}>
@@ -60,7 +60,10 @@ const Footer = ({ scrollToTop }) => {
         <hr className="lg:hidden lg:order-none order-2 " />
 
         <div className="footer-3 lg:order-none  order-2  gap-10 items-center">
-          <form action="" className="lg:items-start text-center items-center">
+          <form
+            action=""
+            className="lg:items-start lg:text-start text-center items-center"
+          >
             <h4>Apuntate para recibir noticias y promociones</h4>
             <input
               type="text"

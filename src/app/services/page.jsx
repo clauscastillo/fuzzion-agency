@@ -1,3 +1,5 @@
+"use client";
+
 import { BsArrow90DegRight } from "react-icons/bs";
 
 import Budget from "../../components/Budget";

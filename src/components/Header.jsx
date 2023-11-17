@@ -7,11 +7,16 @@ import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { AnimatePresence } from "framer-motion";
 import Contact from "./Contact";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export function Header({ scrollToTop }) {
   const [budget, setBudget] = useState(false);
   const [contact, setContact] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
+  const path = usePathname();
+
+  console.log(path);
 
   const handleClickBudget = () => {
     setBudget(!budget);
@@ -26,7 +31,7 @@ export function Header({ scrollToTop }) {
     setToggleMenu(!toggleMenu);
   };
   return (
-    <header className="h-16 lg:h-24 bg-dark px-5p py-5 xl:px-1/10 grid z-20 grid-cols-2 lg:grid-cols-header w-full box-border items-center ">
+    <header className="h-[14vh] bg-dark px-5p py-5 xl:px-1/10 grid z-20 grid-cols-2 lg:grid-cols-header w-full box-border items-center ">
       <AnimatePresence>
         {budget && <Budget popup={true} close={handleClickBudget} />}
       </AnimatePresence>
@@ -35,7 +40,13 @@ export function Header({ scrollToTop }) {
       </AnimatePresence>
 
       <Link href="/" className="z-20">
-        <img className="h-auto w-24 lg:w-36" src="/white-fuzzion.png" alt="" />
+        <Image
+          width={200}
+          height={30}
+          className="h-auto w-24 lg:w-36"
+          src="/white-fuzzion.png"
+          alt=""
+        />
       </Link>
 
       <div
@@ -47,7 +58,7 @@ export function Header({ scrollToTop }) {
       >
         <nav className="flex lg:flex-row flex-col lg:gap-8 text-center gap-3">
           <Link
-            className="nav-link"
+            className={`nav-link ${path === "/" ? "active" : ""}`}
             href={"/"}
             onClick={() => {
               handleToggleMenu();
@@ -57,7 +68,7 @@ export function Header({ scrollToTop }) {
             Home
           </Link>
           <Link
-            className="nav-link "
+            className={`nav-link ${path === "/services" ? "active" : ""}`}
             href={"/services"}
             onClick={() => {
               handleToggleMenu();
@@ -67,7 +78,7 @@ export function Header({ scrollToTop }) {
             Servicios
           </Link>
           <Link
-            className="nav-link"
+            className={`nav-link ${path === "/nosotros" ? "active" : ""}`}
             href={"/nosotros"}
             onClick={() => {
               handleToggleMenu();

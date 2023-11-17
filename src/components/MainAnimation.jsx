@@ -1,7 +1,7 @@
 const MainAnimation = () => {
   return (
     <svg
-      className="lg:order-none lg:w-full orden-1 w-3/4 justify-self-center"
+      className="lg:order-none lg:w-full orden-1 w-1/2 justify-self-center"
       viewBox="0 0 756 626"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

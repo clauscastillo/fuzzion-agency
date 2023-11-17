@@ -1,9 +1,14 @@
 import Image from "next/image";
 import { AiFillCloseCircle } from "react-icons/ai";
+import { motion } from "framer-motion";
 
 const Budget = ({ popup, close }) => {
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.5 }}
+      transition={{ duration: 1 }}
       className={
         popup
           ? "lg:px-1/10 px-5p fixed grid gap-10 grid-cols-2 bg-black/95 py-20 overflow-y-auto text-white w-full h-full top-0 left-0 m-0 z-30"
@@ -60,6 +65,11 @@ const Budget = ({ popup, close }) => {
           <label htmlFor="">Nombre</label>
           <input
             type="text"
+            className="border-2 rounded-md border-slate-300 p-2 focus:border-main focus:outline-none text-dark "
+          />
+          <label htmlFor="">Correo Electrónico</label>
+          <input
+            type="email"
             className="border-2 rounded-md border-slate-300 p-2 focus:border-main focus:outline-none text-dark"
           />
           <label htmlFor="">Empresa</label>
@@ -67,9 +77,13 @@ const Budget = ({ popup, close }) => {
             type="text"
             className="border-2 rounded-md border-slate-300 p-2 focus:border-main focus:outline-none text-dark"
           />
+
           <label htmlFor="">Comentarios adicionales</label>
           <textarea className="resize-none border-2 rounded-md border-slate-300 p-2 focus:border-main focus:outline-none text-dark" />
-          <button type="submit" className="bg-dark text-white rounded-xl py-2">
+          <button
+            type="submit"
+            className="bg-dark text-white rounded-xl py-2 hover:bg-main transition-colors duration-500"
+          >
             Enviar
           </button>
         </form>
@@ -79,7 +93,7 @@ const Budget = ({ popup, close }) => {
         <a href="mailto:info@fuzzionagency.com">info@fuzzionagency.com</a>
         <a href="http://wa.me/595972217068">+595-972-217-068</a>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

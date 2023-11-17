@@ -35,7 +35,7 @@ const Index = () => {
   }, []);
   return (
     <main>
-      <article className="lg:px-1/10 lg:grid-cols-60/40 py-10 grid px-5p box-border">
+      <article className="h-[86vh] lg:px-1/10 lg:grid-cols-60/40 py-10 grid px-5p box-border items-center">
         <div className="lg:order-none order-2">
           <h1 className="lg:text-6xl lg:text-left font-bold text-3xl text-center">
             Transformando Ideas <br className="hidden lg:inline" />
@@ -52,11 +52,6 @@ const Index = () => {
             nosotros y transforma tu visión en éxito digital.
           </p>
         </div>
-        {/* <img
-          src="grafic.png"
-          alt=""
-          className="lg:order-none lg:w-full orden-1 w-1/2 justify-self-center"
-        /> */}
         <MainAnimation />
       </article>
 

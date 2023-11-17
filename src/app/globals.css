@@ -17,20 +17,13 @@
 body {
   overflow-x: hidden;
 }
+
 *{
   margin: 0;
   padding: 0;
-  border: 0;
 }
 
 
-
-
-@media (min-width: 1024px) {
-  main {
-    padding-top: 6rem;
-  }
-}
 
 
 
