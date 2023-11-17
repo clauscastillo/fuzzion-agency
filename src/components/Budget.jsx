@@ -91,7 +91,7 @@ const Budget = ({ popup, close }) => {
       <div className="hidden lg:flex flex-col items-center gap-3 self-center w-4/5">
         <Image src="/contact.png" alt="" width={500} height={800} />
         <a href="mailto:info@fuzzionagency.com">info@fuzzionagency.com</a>
-        <a href="http://wa.me/595972217068">+595-972-217-068</a>
+        <a href="http://wa.me/595985731684">+595-985-731-684</a>
       </div>
     </motion.section>
   );
