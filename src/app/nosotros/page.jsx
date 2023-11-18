@@ -42,12 +42,7 @@ const equipo = [
 
 const About = () => {
   return (
-    <main
-      initial={{
-        opacity: 0,
-      }}
-      animate={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
-    >
+    <>
       <section className="lg:px-1/10 text-center flex align-center flex-col items-center my-8">
         <h2 className="text-main font-bold text-5xl">Valores</h2>
         <p className="w-3/5 mt-4 mb-10">
@@ -124,7 +119,7 @@ const About = () => {
           height={600}
         />
       </section>
-    </main>
+    </>
   );
 };
 

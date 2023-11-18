@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Page = () => {
   return (
-    <main>
+    <>
       <section className="lg:px-1/10 px-5p py-10 text-center">
         <h1 className="lg:text-5xl text-4xl font-bold ">
           Nuestros <span className="text-main">Servicios</span>
@@ -96,7 +96,7 @@ const Page = () => {
       </section>
       <Consulting />
       <Budget />
-    </main>
+    </>
   );
 };
 

@@ -5,6 +5,7 @@ import MainAnimation from "../components/MainAnimation";
 import TextAnimate from "../components/TextAnimate";
 import Consulting from "../components/Consulting";
 import Image from "next/image";
+import { InstagramEmbed } from "react-social-media-embed";
 
 const Index = () => {
   useEffect(() => {
@@ -34,7 +35,7 @@ const Index = () => {
     // Llama a la función inicialmente para mostrar las tarjetas que ya están visibles al cargar la página
   }, []);
   return (
-    <main>
+    <>
       <article className="h-[86vh] lg:px-1/10 lg:grid-cols-60/40 py-10 grid px-5p box-border items-center">
         <div className="lg:order-none order-2">
           <h1 className="lg:text-6xl lg:text-left font-bold text-3xl text-center">
@@ -54,13 +55,11 @@ const Index = () => {
         </div>
         <MainAnimation />
       </article>
-
       {/* <section>
         <h1>Te ofrecemos una asesoría gratuita!</h1>
       </section>
       <section>Empresas con las que trabajamos</section> */}
-
-      <section className="py-10 lg:px-1/10 px-5p flex flex-col gap-5 bg-2sec bg-cover bg-no-repeat text-white">
+      <section className="py-10 lg:px-1/10 px-5p flex flex-col gap-5 bg-2sec bg-cover bg-no-repeat text-white w-[95%] mx-auto rounded-lg">
         <h1 className="lg:text-4xl font-bold text-center text-xl">
           Nos enfocamos en <span className="text-main">potenciar empresas</span>{" "}
           a través de Internet
@@ -167,6 +166,24 @@ const Index = () => {
         />
       </section>
       <Consulting />
+      <h1 className="text-dark text-4xl text-center pt-10 font-bold">
+        Explora nuestro contenido
+      </h1>
+      <section className="lg:grid-cols-3 lg:px-[10%] grid justify-center py-10">
+        <InstagramEmbed
+          url="https://www.instagram.com/p/CzwHNTqLrMz/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+          width={328}
+        />
+        <InstagramEmbed
+          url="https://www.instagram.com/reel/Czw3Ld3LGuq/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+          width={328}
+        />
+        <InstagramEmbed
+          url="https://www.instagram.com/p/CzyxmN6LSnD/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+          width={328}
+        />
+      </section>
+
       {/* <section className="testimonial">
         <h3>TESTIMONIAL</h3>
         <h1 className="font-bold">
@@ -184,7 +201,7 @@ const Index = () => {
         <h4>PEDRO SALINAS</h4>
         <p>IT CONSULTANT</p>
       </section> */}
-    </main>
+    </>
   );
 };
 
